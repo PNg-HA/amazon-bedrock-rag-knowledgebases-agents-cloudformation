@@ -1,0 +1,16 @@
+aws cloudformation create-stack --stack-name kb-agent --template-body file://AmazonBedrock_kb_agents.yml  --parameters ParameterKey=AgentName,ParameterValue=rag-sagemaker-agent  ParameterKey=AmazonBedrockExecutionRoleForKnowledgeBasearn,ParameterValue=arn:aws:iam::140023408379:role/AmazonBedrockExecutionRoleForKnowledgeBase-rag-sagemaker-kb  ParameterKey=AOSSIndexName,ParameterValue=rag-sagemaker-readthedocs-io  ParameterKey=CollectionArn,ParameterValue=arn:aws:aoss:us-east-1:140023408379:collection/p10b9fy2z0l754z61861  ParameterKey=DataSource,ParameterValue=rag-sagemaker-kb-140023408379  ParameterKey=KnowledgeBaseDescription,ParameterValue='Answer based only on information contained in knowledge base.'  ParameterKey=KnowledgeBaseName,ParameterValue=rag-sagemaker-kb  ParameterKey=S3bucketarn,ParameterValue=arn:aws:s3:::rag-sagemaker-kb-140023408379 --capabilities CAPABILITY_IAM
+
+
+aws cloudformation create-stack `
+    --stack-name kb-agent `
+    --template-body file://AmazonBedrock_kb_agents.yml `
+    --parameters `
+        ParameterKey=AgentName,ParameterValue=rag-sagemaker-agent `
+        ParameterKey=AmazonBedrockExecutionRoleForKnowledgeBasearn,ParameterValue=arn:aws:iam::140023408379:role/AmazonBedrockExecutionRoleForKnowledgeBase-rag-sagemaker-kb `
+        ParameterKey=AOSSIndexName,ParameterValue=rag-sagemaker-readthedocs-io `
+        ParameterKey=CollectionArn,ParameterValue=arn:aws:aoss:us-east-1:140023408379:collection/p10b9fy2z0l754z61861 `
+        ParameterKey=DataSource,ParameterValue=rag-sagemaker-kb-140023408379 `
+        ParameterKey=KnowledgeBaseDescription,ParameterValue='Answer based only on information contained in knowledge base.' `
+        ParameterKey=KnowledgeBaseName,ParameterValue=rag-sagemaker-kb `
+        ParameterKey=S3bucketarn,ParameterValue=arn:aws:s3:::rag-sagemaker-kb-140023408379 `
+    --capabilities CAPABILITY_NAMED_IAM

@@ -1,0 +1,28 @@
+{
+  "agentId": "A3ITDYP2J8",
+  "callerChain": [
+    {
+      "agentAliasArn": "arn:aws:bedrock:us-east-1:140023408379:agent-alias/A3ITDYP2J8/TSTALIASID"
+    }
+  ],
+  "approximateTime": "2025-02-12T10:35:40.842816957Z",
+  "invocationInput": [
+    {
+      "invocationType": "KNOWLEDGE_BASE",
+      "knowledgeBaseLookupInput": {
+        "knowledgeBaseId": "V94V6CZUEC",
+        "text": "Are you chatgpt?"
+      },
+      "traceId": "4ed665fb-c7aa-43f3-b9db-696611577e9f-0"
+    }
+  ],
+  "observation": [
+    {
+      "knowledgeBaseLookupOutput": {
+        "retrievedReferences": []
+      },
+      "traceId": "4ed665fb-c7aa-43f3-b9db-696611577e9f-0",
+      "type": "KNOWLEDGE_BASE"
+    }
+  ]
+}
